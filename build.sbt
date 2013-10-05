@@ -4,7 +4,7 @@ val NGS3rdParty = "NGS 3rd Party" at "http://ngs.hr/nexus/content/repositories/t
 
 // ### BASIC SETTINGS ###
 
-version := "0.1.0"
+version := "0.1.1"
 
 name := "Patience-Diff"
 
@@ -39,7 +39,7 @@ javacOptions := Seq(
 crossScalaVersions := Seq(
   "2.8.1", "2.8.2"
 , "2.9.0", "2.9.0-1", "2.9.1", "2.9.1-1", "2.9.2", "2.9.3"
-, "2.10.3-RC2"
+, "2.10.3"
 , "2.11.0-M5"
 )
 
@@ -95,7 +95,7 @@ libraryDependencies ++= Seq(
     (scalaVersion.value match {
       case x if x startsWith "2.8." => "1.8"
       case x if x startsWith "2.9." => "2.0.M5b"
-      case x if x startsWith "2.10." => "2.0.M8"
+      case x if x startsWith "2.10." => "2.0.RC1"
       case x if x startsWith "2.11." => "2.0.M7"
     } ) % "test"
 , "junit" % "junit" % "4.11" % "test"

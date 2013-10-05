@@ -16,13 +16,7 @@ class OwenDiffFeatureSpec
       val file1 = fromInputStream(getClass.getResourceAsStream("/ioobe/before.dsl")).getLines.toList
       val file2 = fromInputStream(getClass.getResourceAsStream("/ioobe/after.dsl")).getLines.toList
 
-      try {
-        Diff.diff(file1, file2)
-      }
-      catch {
-        case e: IndexOutOfBoundsException =>
-          info("An error has occured: " + e)
-      }
+      Diff.diff(file1, file2)
 
       pending
     }
@@ -31,13 +25,7 @@ class OwenDiffFeatureSpec
       val file1 = fromInputStream(getClass.getResourceAsStream("/soe/before.dsl")).getLines.toList
       val file2 = fromInputStream(getClass.getResourceAsStream("/soe/after.dsl")).getLines.toList
 
-      try {
-        Diff.diff(file1, file2)
-      }
-      catch {
-        case e: StackOverflowError =>
-          info("An error has occured: " + e)
-      }
+      Diff.diff(file1, file2)
 
       pending
     }
